@@ -34,5 +34,16 @@
 ### 6. hasOwnProperty()
 ### 7. Object.hasOwn() (Modern)
 ### 8. Object.freeze()
+Object.freeze() → Nothing can change
 ### 9. Object.seal()
+Object.seal() → Shape fixed, values can change
 ### 10. Object.preventExtensions()
+Object.preventExtensions() → “No new keys, but I can still edit or delete old ones.”
+
+| Feature           | preventExtensions  | seal           | freeze            |
+| ----------------- | ------------------ | -------------- | ----------------- |
+| Add properties    | ❌                  | ❌              | ❌                 |
+| Delete properties | ✅                  | ❌              | ❌                 |
+| Modify values     | ✅                  | ✅              | ❌                 |
+| Use case          | Lock shape loosely | Lock structure | Full immutability |
+
