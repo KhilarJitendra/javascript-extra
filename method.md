@@ -30,9 +30,15 @@
 ### 2. Object.values()
 ### 3. Object.entries() 🔥🔥
 ### 4. Object.assign()
+const returnedTarget = Object.assign(target, source);
+return new object
 ### 5. structuredClone() — Deep Copy (Modern)
 ### 6. hasOwnProperty()
 ### 7. Object.hasOwn() (Modern)
+const object = {
+  prop: "exists",
+};
+console.log(Object.hasOwn(object, "prop"));
 ### 8. Object.freeze()
 Object.freeze() → Nothing can change
 ### 9. Object.seal()
