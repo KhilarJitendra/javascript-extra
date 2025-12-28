@@ -128,16 +128,7 @@ navigator.onLine
 navigator.geolocation
 ```
 
-5. navigator
-
-```js
-navigator.userAgent
-navigator.language
-navigator.onLine
-navigator.geolocation
-```
-
-6. screen
+5. screen
 
 ```js
 screen.width
@@ -145,7 +136,7 @@ screen.height
 screen.availWidth
 ```
 
-7. Timer
+6. Timer
 
 ```js
 setTimeout(fn, 1000)
