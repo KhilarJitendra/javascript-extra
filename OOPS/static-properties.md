@@ -1,5 +1,3 @@
-Here is the **cleanly extracted, interview-ready Markdown (MD)** version of **Static Properties and Methods in JavaScript**, aligned with what you already documented.
-
 ---
 
 ## (13) Static Properties and Methods (JavaScript)
