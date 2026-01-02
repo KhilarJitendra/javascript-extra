@@ -75,6 +75,9 @@ Key points:
 * `new` is used to create objects
 * `constructor()` runs automatically
 * Methods are added to the **prototype**
+* User (class / constructor function)
+
+<img width="763" height="280" alt="Screenshot 2026-01-02 at 11 49 30 AM" src="https://github.com/user-attachments/assets/cd5aa735-7012-4bd0-aad6-6efae36a2d84" />
 
 ---
 
