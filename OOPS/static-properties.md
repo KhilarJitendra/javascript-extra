@@ -215,6 +215,27 @@ Rabbit.prototype.__proto__ === Animal.prototype; // true
 ## ⭐ Interview One-Liner
 
 > Static methods and properties belong to the class itself, not instances, and are commonly used for utility logic, factory methods, and class-level operations.
+> Count the frequency whenever object is created
+
+```js
+class Counter {
+  static #count = 0;
+  constructor() {
+    Counter.#count++;
+  }
+
+  static getCount() {
+    return Counter.#count;
+  }
+}
+
+const ob1 = new Counter();
+const ob2 = new Counter();
+const ob3 = new Counter();
+
+console.log(Counter.getCount());
+
+```
 
 ---
 
