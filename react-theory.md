@@ -87,7 +87,6 @@ During the render phase, React:
 
 ---
 
-
 ## 3. **Virtual DOM + Reconciliation + Diffing**
 
 “Reconciliation is the process React uses to compare the previous and the new Virtual DOM trees to determine what has changed.”
@@ -230,15 +229,29 @@ State change
 ---
 
 
+## 6. **React Lifecycle (Class → Hooks mapping)**
+
+| Phase   | Method                   |
+| ------- | ------------------------ |
+| Mount   | constructor              |
+|         | render                   |
+|         | componentDidMount        |
+| Update  | shouldComponentUpdate    |
+|         | render                   |
+|         | componentDidUpdate       |
+| Unmount | componentWillUnmount     |
+| Error   | componentDidCatch        |
+|         | getDerivedStateFromError |
 
 
+| Class                 | Hook                           |
+| --------------------- | ------------------------------ |
+| componentDidMount     | `useEffect(() => {}, [])`      |
+| componentDidUpdate    | `useEffect(() => {}, [deps])`  |
+| componentWillUnmount  | `useEffect(() => cleanup, [])` |
+| shouldComponentUpdate | `React.memo`                   |
 
-
-
-
-
-
-
+---
 
 
 
