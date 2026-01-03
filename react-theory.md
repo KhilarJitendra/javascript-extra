@@ -96,6 +96,153 @@ During the render phase, React:
 
 ---
 
+## 4. **React Fiber (Architecture & Purpose)**
+
+**React Fiber** is React’s internal reconciliation architecture that breaks the component tree into **units of work**, enabling **pause, resume, and priority-based rendering** for better responsiveness.
+
+---
+
+### Fiber Node (per component)
+```js
+{
+  type,
+  child,
+  sibling,
+  return,
+  stateNode,
+  pendingProps,
+  memoizedState,
+  flags
+}
+````
+
+**Fiber nodes**
+
+* Live in **heap memory**
+* Form a **linked-list–based tree**
+* Replace **recursive call stack traversal**
+
+---
+
+### How Fiber Works (Execution Model)
+
+**Two Trees**
+
+* **Current tree** → what’s on screen
+* **Work-in-Progress tree** → what React is building
+
+**Process**
+
+1. Work on **one Fiber at a time**
+2. Can **pause** between units
+3. **Resume** later
+4. **Commit** once ready
+
+| Phase  | Behavior                       |
+| ------ | ------------------------------ |
+| Render | Incremental, interruptible     |
+| Commit | Synchronous, non-interruptible |
+
+➡️ Fiber enables **concurrent rendering**, but **DOM updates stay synchronous**.
+
+---
+
+### Purpose of React Fiber (Interview Gold)
+
+Fiber exists to:
+
+* Enable **concurrent rendering**
+* **Prioritize** user interactions
+* Avoid **UI blocking**
+* Support **Suspense**
+* Enable **Transitions** (`startTransition`)
+* Improve **perceived performance**
+
+---
+
+### Memory & Execution
+
+* Fiber nodes → **heap**
+* Virtual DOM trees → **heap**
+* Diffing & reconciliation → **call stack execution**
+
+---
+
+### Are There Multiple Algorithms in React?
+
+| Responsibility     | Algorithm                |
+| ------------------ | ------------------------ |
+| What changed?      | Reconciliation (Diffing) |
+| When to work?      | Fiber Scheduler          |
+| How to update DOM? | Commit Phase             |
+
+---
+
+### Before React 18 (Stack Reconciler) that is React 16
+
+* Rendering was **synchronous**
+* Large updates → **UI freeze**
+* **No interruption**
+
+Flow:
+
+```
+State change
+→ Re-render subtree
+→ Block main thread
+→ Commit DOM
+```
+
+---
+
+### One-Line Definition
+
+**React Fiber enables interruptible, priority-based rendering by breaking rendering into small units, improving responsiveness and performance.**
+
+** Also check - https://medium.com/@jitendrakhilar609/understanding-react-fiber-explained-simply-85e67a1f882b **
+
+---
+
+---
+
+## 5. **State Management in React** 
+  - All type states
+    - Local state (Component level)
+    - Derived State (const firstName = fname + lname)
+    - Global (Shared) state (use context APi or Redux)
+      - theme
+      - auth user
+      - language
+    - Server State (reeact query or tenstack query)
+      - comes from API
+  - How state update in react
+    - “When setState is called, React does not update the state immediately.
+       It schedules an update using the Fiber scheduler, batches multiple updates, and triggers a re-render.”
+    - State updates are asynchronous
+    - React batches updates
+  - When to use Redux (Please read - https://medium.com/@jitendrakhilar609/redux-essentials-interview-topics-for-developers-b19188b4848a)
+    - complex, frequently changing global state
+    - Eg - Authentication and user session , product cart information (quantity, price etc)
+  - When to use Contetxt API
+    - global, low-frequency data across the component tree
+    - Eg - Theme (light / dark), Auth user info, Language / locale, Feature flags, App-level configuration
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
