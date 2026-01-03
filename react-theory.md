@@ -228,7 +228,6 @@ State change
 
 ---
 
-
 ## 6. **React Lifecycle (Class → Hooks mapping)**
 
 | Phase   | Method                   |
@@ -254,7 +253,12 @@ State change
 ---
 
 
+---
 
+## 6. **Performance Optimization in React**
+
+  - Part 1 - https://www.youtube.com/watch?v=G8Mk6lsSOcw 
+  - Part 2 - https://www.youtube.com/watch?v=HJFDXKkz67M
 
 
 
