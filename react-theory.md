@@ -252,14 +252,29 @@ State change
 
 ---
 
-
----
-
 ## 6. **Performance Optimization in React**
 
   - Part 1 - https://www.youtube.com/watch?v=G8Mk6lsSOcw 
   - Part 2 - https://www.youtube.com/watch?v=HJFDXKkz67M
 
+---
+
+## 7. **CSR vs SSR (and hydration basics)**
+
+  - CSR
+    - In CSR, the browser downloads a minimal HTML file and a large JavaScript bundle. React then runs entirely in the browser to generate the UI.
+    - Good for dashboards, internal tools, Poor SEO, Slow first paint (FCP)
+    - Admin panels, Authenticated apps, Heavy interactivity (e.g., Gmail-like apps)
+  
+  - SSR
+    - In SSR, React renders HTML on the server, sends fully formed HTML to the browser.
+    - Faster, Excellent SEO, Complex caching & infra
+    - Marketing websites, E-commerce product pages
+    
+  - Hydration
+    - React runs once on the server to generate HTML, and then runs again in the browser during hydration, where it does not recreate the DOM but attaches JavaScript logic to the existing HTML.
+    - If server rendered HTML != Client HTML - Hydration error occurs - It does cause issue on prduction ..but slight fickering user would notice from server to client
+    - Link - https://www.youtube.com/watch?v=T6XoE3IIzHQ
 
 
 
