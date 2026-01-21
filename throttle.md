@@ -131,6 +131,63 @@ window.addEventListener(
 );
 ```
 
+
+```jsx
+With React
+import { useEffect, useState } from "react";
+
+function useDebounce(value, delay = 500) {
+   const [debouncedValue, setDeboucnedValue] = useState('');
+
+   useEffect( () => {
+       const timer = setTimeout( () => {
+            setDeboucnedValue(value)
+       },  delay)
+
+       return () => {
+           clearTimeout(timer);
+       }
+   }, [value, delay] )
+
+
+   return debouncedValue;
+}
+
+export default useDebounce;
+
+
+import { useEffect, useState } from "react";
+
+import useDebounce from "./useDebounce";
+
+function Search() {
+    const [searchInput, setSearchInput] = useState('');
+
+    const debouncedValue = useDebounce(searchInput,300);
+
+    const handleChange = (e) => {
+        setSearchInput(e.target.value);
+    }
+
+    useEffect( () => {
+        if(!debouncedValue.trim()) return;
+        console.log('calling ..API....', debouncedValue)
+    }, [debouncedValue])
+
+    return (
+        <>
+        <h1>this is my search box..</h1>
+
+        <input placeholder="enter your name" value={searchInput} onChange={handleChange} />
+        </>
+    )
+}
+
+export default Search;
+
+
+```
+
 ---
 
 ### Key Difference (Debounce vs Throttle)
