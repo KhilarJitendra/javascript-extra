@@ -60,7 +60,7 @@ const newObj = Object.assign({}, obj);
 newObj.coding.language = "C++";
 console.log(obj);
 
-// use this instead of above
+// using spread operator (but here nested object also shared by reference)
 
 const newObj = {
   ...obj,
