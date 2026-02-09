@@ -1,211 +1,193 @@
----
+# Object-Oriented Programming (OOP)
 
-# Object-Oriented Programming (OOPs) in JavaScript
+## Programming Paradigms
 
----
-
-## (1) What is OOPs?
-
-**Object-Oriented Programming (OOP)** is a programming paradigm that organizes code around **objects** (data + functions) to model real-world entities.
-
-* Objects combine **state (properties)** and **behavior (methods)**
-* Promotes reusable, maintainable, and scalable code
-* Uses core concepts like:
-
-  * **Classes**
-  * **Encapsulation**
-  * **Inheritance**
-  * **Polymorphism**
-  * **Abstraction**
+* **Procedural / Functional Programming**
+* **Object-Oriented Programming (OOP)**
 
 ---
 
-## (2) OOPs in JavaScript
+## What is OOP?
 
-* JavaScript supports OOP, but with its **own flavor**
-* It is **prototype-based**, not class-based at the core
-* `class` syntax is **syntactic sugar over prototypes**
+* **OOP is a programming paradigm** based on the concept of **objects**
+* In OOP, we represent **real-world entities as objects**
+* An object contains:
 
-### ❌ Not Supported Like Classical OOP Languages (Java / C++)
-
-JavaScript does **NOT natively support**:
-
-* ❌ Method Overloading
-* ❌ Multiple Inheritance
-* ❌ Interfaces
-* ❌ Abstract Classes (native keyword)
-* ❌ Protected Access Modifier
-* ❌ Static Typing
-
-> ⚠️ **Correction (important):**
-> **Method Overriding IS supported in JavaScript**, via prototype chain and `extends`.
+  * **Properties** → data / state
+  * **Methods** → behavior
 
 ---
 
-## (3) What is a Class (JS-specific)?
-
-* A **class** is a blueprint to create multiple similar objects
-* In JavaScript, a class is actually a **function under the hood**
-
-A class groups:
-
-* `constructor`
-* Prototype methods
-* Getters / Setters
-* Fields (properties)
+## Example: Object in JavaScript
 
 ```js
-typeof User; // "function"
+let user = {
+  // Properties (data)
+  name: "John",
+  color: "black",
+
+  // Methods (behavior)
+  addUser() {
+    // logic to add user
+  },
+
+  removeUser() {
+    // logic to remove user
+  }
+};
 ```
 
 ---
 
-## (4) Basic Class Syntax
+## Core Components of OOP
+
+### 1. Properties
+
+* Variables that store data of an object
+* Example: `name`, `color`
+
+### 2. Methods
+
+* Functions that define what an object can do
+* Example: `addUser()`, `removeUser()`
+
+---
+
+## Four Pillars of OOP
+
+### 1. Encapsulation
+
+* **Hiding internal data** and exposing only what is necessary
+* Achieved using access control and methods
+
+📌 *Example:* User data can only be modified through methods, not directly.
+
+---
+
+### 2. Abstraction
+
+* **Hiding implementation details**
+* Showing only **essential functionality** to the user
+
+📌 *Example:* Using `startCar()` without knowing how the engine works.
+
+---
+
+### 3. Inheritance
+
+* Creating a **new class from an existing (parent) class**
+* Promotes **code reusability**
+
+📌 *Example:* `AdminUser` inherits from `User`
+
+---
+
+### 4. Polymorphism
+
+* **Same method name, different behavior**
+* Achieved via method overriding
+
+📌 *Example:*
+`login()` behaves differently for `User` and `Admin`
+
+---
+
+## OOP Support in JavaScript
+
+* JavaScript **supports OOP**
+* `class` in JavaScript is **syntactic sugar**
+* Internally:
+
+  ```js
+  typeof class === "function"
+  ```
+
+---
+
+## JavaScript Class Basics
 
 ```js
-class MyClass {
-  constructor() {}
-  method1() {}
-  method2() {}
+class User {
+  constructor(name) {
+    this.name = name; // field / property
+  }
+
+  sayHi() {
+    console.log(this.name);
+  }
 }
 ```
 
-Key points:
+### Key Points
 
-* `new` is used to create objects
-* `constructor()` runs automatically
-* Methods are added to the **prototype**
-* User (class / constructor function)
+* A class can have:
 
-<img width="763" height="280" alt="Screenshot 2026-01-02 at 11 49 30 AM" src="https://github.com/user-attachments/assets/cd5aa735-7012-4bd0-aad6-6efae36a2d84" />
+  * **Constructor**
+  * **Fields (properties)**
+  * **Prototype methods**
+  * **Getters / Setters**
+* Constructor:
 
----
-
-## (5) Object Creation Flow (`new` keyword)
-
-```js
-new User("John");
-```
-
-Internally, JavaScript does:
-
-1. Creates a new empty object `{}`
-2. Sets `this` → new object
-3. Calls `constructor()`
-4. Links object to `User.prototype`
-5. Returns the object
+  * Runs **automatically**
+  * Used for **initialization**
+  * Only **one constructor per class**
+  * Optional
 
 ---
 
-## (6) Constructor Rules
-
-* Only **one constructor** per class
-* Constructor is **optional**
-* Used only for **initialization**
-
-```js
-constructor(name) {
-  this.name = name;
-}
-```
-
-If omitted, JS adds an empty constructor automatically.
-
----
-
-## (7) Where Do Methods Live?
-
-* All methods live on `ClassName.prototype`
-* Instances **do not copy methods**
-
-```js
-User.prototype.sayHi;
-```
+## Prototype Behavior
 
 ```js
 Object.getOwnPropertyNames(User.prototype);
-// ["constructor", "sayHi"]
 ```
 
----
-
-## (8) Class Methods Are Non-Enumerable
+* Methods are stored in the **prototype**
+* Methods are **non-enumerable**
 
 ```js
-for (let key in user) {
+for (const key in user) {
   console.log(key);
 }
 ```
 
-* Only **instance properties** are logged
-* Methods are skipped (non-enumerable)
+✔ Only instance properties are logged
+❌ Methods are skipped
 
 ---
 
-## (9) Classes Are Always in Strict Mode
+## Classes in JavaScript
 
-* Code inside classes runs in **`"use strict"`**
-* Prevents:
-
-  * Undeclared variables
-  * Silent errors
-  * Accidental globals
-
-(No need to write `"use strict"` manually)
+* Classes are always in **strict mode**
+* Methods are added to the **prototype**
+* Cannot be called without `new`
 
 ---
 
-## (10) Class Expressions
+## Class Expressions
 
-### Anonymous class expression
+### Anonymous Class Expression
 
 ```js
 let User = class {
-  sayHi() {}
+  sayHi() {
+    console.log("Hi");
+  }
 };
 ```
 
-### Named class expression
+### Named Class Expression
 
 ```js
 let User = class MyClass {
   sayHi() {
-    console.log(MyClass); // visible only inside class
+    console.log(MyClass); // accessible only inside class
   }
 };
 ```
 
-* Class name is **scoped to class body only**
-
 ---
 
-## (11) Class Fields vs Constructor Assignment
-
-### Class Field
-
-```js
-class User {
-  name = "John";
-}
-```
-
-### Constructor Assignment
-
-```js
-class User {
-  constructor() {
-    this.name = "John";
-  }
-}
-```
-
-✅ Both are valid
-📌 Class fields are cleaner for defaults
-📌 Constructor is better for dynamic values
-
----
-
-## (12) `this` in Class
+## `this` Keyword in Classes
 
 * `this` refers to the **current instance**
 * Depends on **how the method is called**
@@ -220,26 +202,27 @@ class User {
 }
 
 const user = new User();
-user.sayHi(); // "John"
-```
-
-### Common Pitfall
-
-```js
-const hi = user.sayHi;
-hi(); // ❌ undefined (this lost)
-```
-
-### Fix with binding
-
-```js
-const hi = user.sayHi.bind(user);
-hi(); // "John"
+user.sayHi(); // John
 ```
 
 ---
 
-## (13) Watch this videos in Sequence 
+## Common Pitfall: Losing `this`
+
+```js
+const hi = user.sayHi;
+hi(); // ❌ undefined (this is lost)
+```
+
+### Fix using `bind`
+
+```js
+const hi = user.sayHi.bind(user);
+hi(); // ✅ John
+```
+
+
+## Watch this videos in Sequence 
 
 - https://www.youtube.com/watch?v=FMIuwvt0vGQ&list=PL1BztTYDF-QOvKYBBYdjzHISCeaYCAEfH
 - https://www.youtube.com/watch?v=hZqKSFReHc8&list=PL1BztTYDF-QOvKYBBYdjzHISCeaYCAEfH&index=2
