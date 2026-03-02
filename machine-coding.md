@@ -44,6 +44,7 @@
 25. **Calculator** (Basic → Advanced operations)
 26. **Countdown Timer**
 27. **Event Emitter (JavaScript implementation)**
+28. **File Explorer/ VS code sidebar**
 
 ---
 
