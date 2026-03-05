@@ -75,8 +75,3 @@
 | Friday    | 25             |
 | Saturday  | 15             |
 | **Total** | **225 / week** |
-
-
-
-🔥 **A 15-minute daily trick that pushes your profile to the top of recruiter searches on LinkedIn and Naukri.**
-This alone can generate **10–15 recruiter calls per week.**
