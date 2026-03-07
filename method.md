@@ -5,7 +5,7 @@
 ### 1. map() — Transform Data
 ### 2. filter() — Select Data
 ### 3. reduce() — Aggregate / Group / Build Anything 🔥
-### 4. find() — Get First Match
+### 4. find() — Get First Match - it is similar to filter but it return element rather array if not undefined
 ### 5. findIndex()
 ### 6. some() — Any Match?
 ### 7. every() — All Match?
