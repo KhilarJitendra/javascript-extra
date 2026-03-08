@@ -54,7 +54,7 @@ const original = {
 function deepCopy(value) {
   // base condition here.... at the end we have primitive value only like string
 
-  if (value !== null || typeof value !== "object") {
+  if (value == null || typeof value !== "object") {
     return value;
   }
 
