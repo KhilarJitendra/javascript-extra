@@ -87,9 +87,15 @@ implementation, service workers, and advanced caching strategies.
 
 - We also enabled PWA capabilities and used service workers to cache static assets and API responses, improving repeat visit performance and enabling offline support.
 
-- Additionally, we applied advanced caching strategies like browser caching and stale-while-revalidate to reduce latency.
+   	- We enhanced the application by enabling Progressive Web App (PWA) capabilities using service workers.
 
-- As a result, we achieved Lighthouse scores of 90+ and significantly improved load times and overall user experience.
+	- Service workers run in the background and allow us to cache important resources like static assets (JS, CSS, images) and even API responses.
+
+	- This meant that on repeat visits, users didn’t need to re-download everything — content could be served directly from the cache, which significantly improved load times.
+
+	- Additionally, we applied advanced caching strategies like browser caching and stale-while-revalidate to reduce latency.
+
+	- As a result, we achieved Lighthouse scores of 90+ and significantly improved load times and overall user experience.
 
 ### Follow-up Questions
 
