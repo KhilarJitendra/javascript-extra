@@ -283,12 +283,25 @@ As a result, we delivered a scalable and reliable checkout system that significa
 
 ---
 
+---
 
+## 11. Roles and Responsibility 
 
+---
 
+“Currently, I’m working as a Senior Frontend Developer, where my primary responsibility is owning the frontend development of key user-facing features in a large-scale e-commerce platform.
 
+I’m responsible for end-to-end frontend delivery—from understanding business requirements and designing UI architecture to implementing components, integrating APIs, and ensuring performance and production stability.
 
+I work extensively with React and Next.js to build scalable and reusable component systems, and I also focus on areas like performance optimization, testing, and code quality.
 
+In addition to feature development, I’ve contributed to setting up frontend architecture such as monorepo structure, design systems, and reusable hooks to improve developer productivity and consistency across teams.
+
+I also collaborate closely with backend engineers, designers, and product teams to translate requirements into scalable solutions.
+
+Overall, my role involves both hands-on development and making architectural decisions to ensure the frontend is scalable, maintainable, and performant.”
+
+---
 
 
 
