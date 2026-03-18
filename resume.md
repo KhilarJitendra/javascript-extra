@@ -97,6 +97,17 @@ implementation, service workers, and advanced caching strategies.
 
 	- As a result, we achieved Lighthouse scores of 90+ and significantly improved load times and overall user experience.
 
+
+- What is TanStack Query?
+
+	- TanStack Query is a server-state management library that simplifies data fetching, caching, and synchronization in frontend applications.
+
+	- Instead of manually handling loading states, errors, and caching logic using useEffect, it provides hooks like useQuery and useMutation to manage API data efficiently.
+
+	- It also offers features like automatic caching, background refetching, and deduplication of API calls, which improves performance and developer experience.”
+
+
+
 ### Follow-up Questions
 
 **Q: What are Core Web Vitals?**  
