@@ -27,6 +27,7 @@ custom hooks, improving UI consistency and developer velocity across teams.
 
 - Why Monorepo ?  
   - A monorepo is a single repository that contains multiple projects or modules like UI components, hooks, and applications—instead of having separate repositories for each.
+  - Advantage - https://github.com/KhilarJitendra/javascript-extra/blob/main/monorepo-advantage.md
 
 - As the application scaled, we started facing issues like duplicated code and inconsistent UI across teams.
 
