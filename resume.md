@@ -311,12 +311,12 @@ Overall, my role involves both hands-on development and making architectural dec
 ---
 
 MAIN 
-What does success look like for this role in the first 3–6 months?
-How much involvement will this role have in frontend architecture and system design decisions?
+- What does success look like for this role in the first 3–6 months?
+- How much involvement will this role have in frontend architecture and system design decisions?
 
 Secondary 
-How do you approach performance, scalability, and code quality in your frontend systems?
+- How do you approach performance, scalability, and code quality in your frontend systems?
 	- That’s interesting, I faced something similar while working on checkout performance…
-What are the biggest frontend challenges the team is currently facing?
+- What are the biggest frontend challenges the team is currently facing?
 
 ---
