@@ -323,6 +323,21 @@ Overall, my role involves both hands-on development and making architectural dec
 
 ---
 
+---
+
+## 12. Commercetool
+
+---
+- commercetools is a headless, API-first e-commerce platform that provides backend services
+- backend engine for e-commerce
+  - Product and catalog management
+  - cart and checkout
+  - Multi support country
+  - APIs (rest or graphQL)
+  - SDKs
+
+
+---
 
 ---
 
