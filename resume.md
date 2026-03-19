@@ -236,6 +236,8 @@ The frontend worked closely with backend services for secure payment processing 
 
 Overall, this enabled a seamless and localized payment experience for global users.
 
+Link - https://github.com/KhilarJitendra/javascript-extra/blob/main/payment-integration.md
+
 ### Follow-up Questions
 
 **Q: Did frontend handle payment processing?**  
