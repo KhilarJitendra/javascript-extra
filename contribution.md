@@ -1,4 +1,3 @@
-````mdx
 # Engineering Challenges & Solutions — VCA Global E-Commerce Platform
 
 ---
