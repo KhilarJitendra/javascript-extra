@@ -277,7 +277,22 @@ State change
     - React runs once on the server to generate HTML, and then runs again in the browser during hydration, where it does not recreate the DOM but attaches JavaScript logic to the existing HTML.
     - If server rendered HTML != Client HTML - Hydration error occurs - It does cause issue on prduction ..but slight fickering user would notice from server to client
     - Link - https://www.youtube.com/watch?v=T6XoE3IIzHQ
+   
 
+---
+
+## 8. **Good React practices include:**
+
+
+Writing reusable components
+Avoiding prop drilling
+Optimizing performance
+Using hooks properly
+Handling loading and error states
+Maintaining clean architecture
+Writing tests for critical flows
+
+---
 
 
 
