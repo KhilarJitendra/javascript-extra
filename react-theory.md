@@ -283,14 +283,13 @@ State change
 
 ## 8. **Good React practices include:**
 
-
-Writing reusable components
-Avoiding prop drilling
-Optimizing performance
-Using hooks properly
-Handling loading and error states
-Maintaining clean architecture
-Writing tests for critical flows
+- Writing reusable components
+- Avoiding prop drilling
+- Optimizing performance
+- Using hooks properly
+- Handling loading and error states
+- Maintaining clean architecture
+- Writing tests for critical flows
 
 ---
 
