@@ -99,6 +99,8 @@ During the render phase, React:
 
 **React Fiber** is React’s internal reconciliation architecture that breaks the component tree into **units of work**, enabling **pause, resume, and priority-based rendering** for better responsiveness.
 
+React Fiber = React updates UI in small pieces with priority instead of doing everything at once.
+
 ---
 
 ### Fiber Node (per component)
