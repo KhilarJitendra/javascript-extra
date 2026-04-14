@@ -127,3 +127,37 @@ If a bug is found before release, I prefer to delay slightly rather than ship a 
 **30. Tell me about a mistake and what you learned**
 
 One thing I learned over time is that even good code should be checked for performance and quality before release. In large frontend apps, small inefficiencies can affect the user experience. Now I always think about testing, performance, and maintainability before I finish a feature. 
+
+
+# Team Questions
+
+## 1. What is a strength your team was proud of?
+
+One strength our team was proud of was **strong collaboration and ownership**.  
+Everyone in the team took responsibility beyond their individual tasks. If someone was blocked, others stepped in to help and resolve issues quickly.
+
+We also focused on **building scalable and reusable solutions** instead of quick fixes. This helped us maintain code quality and deliver features faster in the long run.
+
+Because of this approach, we were able to deliver high-quality features consistently and maintain a stable application.
+
+---
+
+## 2. What was a weakness of your team?
+
+One weakness our team initially had was **balancing speed of delivery with long-term scalability**.  
+Due to tight deadlines, sometimes we prioritised quick delivery, which occasionally led to technical debt.
+
+However, we identified this early and improved our process by introducing better **code reviews, reusable component design, and technical discussions** before development.
+
+Over time, this helped us improve code quality while still meeting delivery timelines.
+
+---
+
+## 3. What was your team proud of you for?
+
+My team appreciated my **ownership and collaborative approach**.  
+I often took initiative in improving reusable components and frontend performance, which helped improve user experience and reduce future development effort.
+
+I also helped team members when they were blocked and shared best practices across the team.
+
+Because of this, the team trusted me with critical features and involved me in technical decision-making.
