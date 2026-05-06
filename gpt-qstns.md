@@ -49,6 +49,49 @@ const str = "hello";
 ```js
 const arr = [1, 2, 2, 3, 3, 3, 4];
 // Expected Output: 3
+
+const arr = [1, 2, 2, 3, 3, 3, 4];
+
+function findMaxElement(arr) {
+    let firstElement = arr[0];
+    let count = 1;
+    
+    for(let i=1; i<arr.length;i++) {
+        if(arr[i] === firstElement) {
+            count++
+        } else {
+            count--;
+        }
+        
+        if(count === 0) {
+            firstElement = arr[i];
+            count = 1;
+        }
+    }
+    
+    // phase 2
+    
+    count = 0
+    
+    for(let num of arr) {
+        if (num === firstElement) {
+            count++;
+        }
+    }
+    
+    if(count > Math.floor(arr.length/2)) {
+        return firstElement;
+    }
+    
+    return "no majority element";
+}
+
+const res = findMaxElement(arr);
+
+console.log(res);
+
+
+
 ```
 
 ---
